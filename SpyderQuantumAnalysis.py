@@ -20,15 +20,15 @@ from QuantumCommodityFramework import QuantumCommodityAnalyzer
 #============================================================================
 
 # 1. Choose your commodity set (just change this one line!)
-COMMODITY_SET = 'mixed'  # Options: 'agricultural', 'mixed', 'energy', 'metals', 'etfs'
+COMMODITY_SET = 'etfs'  # Options: 'agricultural', 'mixed', 'energy', 'metals', 'etfs'
 
 # 2. Choose your analysis period
-ANALYSIS_START_DATE = '2025-03-01'  # Start date (use longer period for more data)
-ANALYSIS_END_DATE = '2025-03-31'    # End date
-PERIOD_NAME = 'March2025'            # Name for your analysis files
+ANALYSIS_START_DATE = '2025-01-01'  # Start date (use longer period for more data)
+ANALYSIS_END_DATE = '2025-07-25'    # End date
+PERIOD_NAME = 'Jan_July_2025'       # Name for your analysis files
 
 # 3. Analysis parameters
-DATA_INTERVAL = '1h'                # Data interval: '1d' (daily), '1h' (hourly), '5m' (5-min)
+DATA_INTERVAL = '1d'                # Data interval: '1d' (daily), '1h' (hourly), '5m' (5-min)
 CORRELATION_THRESHOLD = 0.3         # Correlation threshold (0.3-0.7, lower = more events)
 
 #============================================================================
@@ -102,7 +102,6 @@ def run_quantum_analysis():
     # Step 2: Detect coordination events
     print("\n🔍 Step 2: Detecting coordination events...")
     events = analyzer.detect_coordination_events(
-        time_window_seconds=300,
         correlation_threshold=CORRELATION_THRESHOLD
     )
     
