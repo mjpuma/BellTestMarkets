@@ -1,820 +1,525 @@
-# Quantum Coordination Analysis in Commodity Markets: A Bell Inequality Approach
+# Quantum Market Coordination Analysis Framework
 
-## Abstract
+A comprehensive framework for testing Bell inequalities in commodity markets and analyzing the mechanisms behind unusual market correlations.
 
-This framework tests whether commodity price movements exhibit non-local correlations that violate Bell inequalities, potentially indicating quantum-like coordination beyond classical local realism. Using the CHSH (Clauser-Horne-Shimony-Holt) inequality, we analyze commodity ETF price data to detect coordination patterns that cannot be explained by shared information or common economic factors alone.
+## Overview
 
-Think of it this way: if gold and oil prices move together, classical economics says there must be some underlying reason—inflation, supply disruptions, or economic cycles. But what if their coordination is so perfect that no single economic theory could explain it? That would suggest something more mysterious: markets behaving like quantum particles, where the very act of observing certain relationships affects how prices correlate.
+This framework investigates whether commodity markets exhibit correlations that violate Bell inequalities (CHSH > 2.0), potentially indicating non-classical coordination mechanisms. When violations are detected, the framework systematically tests multiple explanations to determine the most likely underlying cause.
 
-## Scientific Background
+**Key Features:**
+- **Bell Inequality Testing**: Rigorous CHSH inequality tests on commodity price correlations
+- **Multi-Layer Analysis**: When violations are found, systematically test alternative explanations
+- **Professional Visualizations**: Publication-quality figures and comprehensive reports
+- **Easy-to-Use Interface**: Simple Spyder script for researchers and analysts
 
-### Bell's Theorem and Market Applications
+## What Are Bell Inequalities and Why Do They Matter?
 
-Bell's theorem demonstrates that no local realistic theory can reproduce all predictions of quantum mechanics. In financial markets, this translates to testing whether price correlations can be explained purely by:
-- **Local factors**: Shared fundamental information, common economic drivers
-- **Realistic assumptions**: Pre-existing market conditions determining outcomes
+### The Science in Simple Terms
 
-**Non-local coordination** would suggest instantaneous influence between geographically or economically separated markets, similar to quantum entanglement.
+**Bell inequalities** are mathematical tests that distinguish between two fundamentally different ways the world can work:
 
-In everyday terms, imagine if gold prices in London and oil prices in New York moved together so perfectly that it seemed like they were communicating faster than any news or information could travel between them. Classical economics says this is impossible—there must always be some underlying factor explaining the connection. Bell inequalities let us test whether markets can violate these classical constraints.
+1. **Classical/Local Reality**: Information and influences travel at finite speeds, and correlations between distant events must have common causes or direct connections.
 
-### The CHSH Inequality: The Ultimate Market Coordination Test
+2. **Quantum/Non-Local Reality**: Certain correlations can be stronger than anything classical physics allows, suggesting "spooky action at a distance."
 
-The CHSH inequality provides a quantitative test of local realism. Here's how it works with a concrete market example:
+### Why Test This in Markets?
 
-**The Setup**: Gold and Oil Correlations Across Time
+Modern commodity markets show puzzling coordination patterns:
+- **Instantaneous correlations** across geographically separated markets
+- **Synchronized price movements** that seem faster than information can travel
+- **Correlation strengths** that sometimes exceed what classical models predict
+
+**The Key Question**: Are these unusual correlations just sophisticated classical mechanisms (algorithms, supply chains, shared information), or do they represent something more fundamental about how complex systems coordinate?
+
+### What Bell Violations Would Mean
+
+If we find genuine Bell inequality violations in markets **after ruling out all classical explanations**, it would suggest:
+
+- **Non-local coordination**: Market correlations that can't be explained by any classical mechanism
+- **Emergent quantum-like behavior**: Large-scale economic systems exhibiting quantum-like properties
+- **New risk management needs**: Standard correlation models may underestimate coordination risks
+- **Fundamental insights**: Into how complex adaptive systems achieve coordination
+
+### What Bell Violations Usually Mean (More Likely)
+
+In practice, Bell violations in markets typically indicate sophisticated **classical coordination mechanisms**:
+
+- **Algorithmic trading networks** creating microsecond-scale synchronized responses
+- **Complex supply chain physics** with hidden physical connections
+- **Fractal market structures** (Mandelbrotian "misbehavior") creating extreme correlations
+- **Market microstructure effects** like margin calls cascading across markets
+
+The framework's strength is **systematically distinguishing** between these different explanations.
+
+## Scientific Context and Significance
+
+### Historical Background
+
+**Bell's Theorem (1964)** revolutionized physics by showing that quantum mechanics makes predictions that no classical theory can match. The **CHSH inequality** (1969) provides a practical test:
+
+- **Classical physics** predicts CHSH ≤ 2.0
+- **Quantum mechanics** allows up to CHSH ≤ 2.828  
+- **Experimental violations** proved quantum mechanics correct and won Nobel Prizes
+
+### Why Test Markets?
+
+Applying Bell tests to markets bridges **quantum physics** and **econophysics**:
+
+1. **Scale Question**: Can quantum-like behavior emerge in macroscopic economic systems?
+2. **Coordination Mystery**: How do complex markets achieve such precise coordination?
+3. **Risk Management**: Are there fundamental limits to predicting market correlations?
+
+### Scientific Value Regardless of Results
+
+**If No Violations Found**: Validates that market correlations follow classical bounds, supporting existing economic theories.
+
+**If Violations Found**: The multi-layer analysis reveals sophisticated coordination mechanisms:
+- **Mandelbrot's "Misbehavior"**: Markets exhibit fractal complexity beyond Gaussian assumptions
+- **Supply Chain Physics**: Physical constraints create "impossible" correlations
+- **Algorithmic Networks**: High-frequency trading creates quantum-like coordination speeds
+- **Microstructure Effects**: Market mechanics create correlation illusions
+
+**Rare Case - Genuine Quantum-Like Behavior**: Would represent a major discovery about emergent properties in complex systems.
+
+### Connection to Modern Finance
+
+This research addresses **real practical problems**:
+- **2008 Financial Crisis**: "Impossible" correlations appeared during market stress
+- **Flash Crashes**: Algorithmic coordination creates sudden market-wide movements
+- **Supply Chain Disruptions**: COVID-19 revealed hidden commodity interdependencies
+- **Climate Correlations**: Weather patterns create complex agricultural market coordination
+
+Understanding these mechanisms helps with **better risk management** and **more accurate models**.
+
+## Scientific Approach
+
+### Bell Inequality Framework
+
+The framework uses the CHSH (Clauser-Horne-Shimony-Holt) inequality to test market correlations:
+
 ```
-A:  Gold direction today     (+1 up, -1 down)
-A': Gold direction tomorrow  (+1 up, -1 down)
-B:  Oil direction today      (+1 up, -1 down)  
-B': Oil direction tomorrow   (+1 up, -1 down)
+CHSH = |E(AB) + E(AB') + E(A'B) - E(A'B')| ≤ 2.0 (Classical Bound)
+CHSH > 2.0 → Bell Inequality Violation
+CHSH ≤ 2.828 → Quantum Mechanical Bound
 ```
 
-**The Test**: We measure four specific correlations:
+### How the Analysis Actually Works (Simple Explanation)
+
+#### Step 1: Collect Market Data
+- Downloads commodity prices (gold, oil, corn, etc.) from Yahoo Finance
+- Calculates price movements: up (+1) or down (-1) for each time period
+- Ensures all measurements are **simultaneous** (same timestamp) to avoid causality issues
+
+#### Step 2: Create "Measurement Settings"
+Just like in quantum physics experiments, we need different ways to "measure" each commodity:
+- **Setting A**: Price direction (up/down)
+- **Setting A'**: Volatility regime (high/low volatility period)  
+- **Setting B**: Price direction of second commodity
+- **Setting B'**: Volatility regime of second commodity
+
+#### Step 3: Calculate Correlations
+Measures how often commodities move together under different measurement combinations:
+- **E(AB)**: How often both commodities move up/down together
+- **E(AB')**: How often commodity A's direction matches commodity B's volatility regime
+- **E(A'B)**: How often commodity A's volatility regime matches commodity B's direction
+- **E(A'B')**: How often both commodities' volatility regimes match
+
+#### Step 4: Test Bell Inequality
+Combines these correlations into the CHSH value:
+- **CHSH ≤ 2.0**: Any classical theory (shared information, algorithms, supply chains) can explain this
+- **CHSH > 2.0**: Something beyond classical explanations is happening
+
+#### Step 5: Multi-Layer Investigation (If Violations Found)
+When CHSH > 2.0, systematically tests four explanations:
+
+**🔬 Mandelbrot Analysis**: 
+- Calculates Hurst exponent (Do prices trend or mean-revert?)
+- Estimates tail index (How extreme can price moves get?)
+- Tests volatility clustering (Do volatile periods cluster together?)
+
+**🌐 Supply Chain Analysis**:
+- Maps known physical connections (corn ↔ ethanol ↔ oil)
+- Tests seasonal patterns (agricultural cycles, heating/cooling seasons)
+- Analyzes crisis correlations (Do correlations spike during market stress?)
+
+**🤖 Algorithmic Coordination Tests**:
+- Measures correlation timing (How fast do correlations appear?)
+- Tests measurement independence (Do results depend on how we measure?)
+- Looks for high-frequency signatures
+
+**🏗️ Microstructure Analysis**:
+- Examines market mechanics (options hedging, margin calls)
+- Tests for structural breaks during crisis periods
+- Maps hidden liquidity networks
+
+### Why This Approach Is Scientifically Rigorous
+
+1. **Eliminates False Positives**: Systematically rules out classical explanations before claiming unusual behavior
+2. **Maintains Simultaneity**: All measurements use exact same timestamps to avoid causality confusion  
+3. **Quality Controls**: Extensive data validation and statistical significance testing
+4. **Reproducible**: Clear methodology that other researchers can verify and extend
+5. **Practical Value**: Even "negative" results (no violations) provide valuable insights about market coordination mechanisms
+
+### Multi-Layer Interpretation
+
+When Bell violations are detected (CHSH > 2.0), the framework tests four categories of explanations:
+
+#### 1. Mandelbrotian Market Structure
+- **Fractal price dynamics** with long-range dependence
+- **Fat-tailed distributions** making extreme correlations more probable  
+- **Volatility clustering** creating persistent correlation patterns
+- **Hurst exponent analysis** for trend persistence vs mean reversion
+
+#### 2. Supply Chain Physics
+- **Weather correlations** affecting multiple agricultural commodities
+- **Storage and transportation** networks creating infrastructure bottlenecks
+- **Seasonal patterns** in commodity demand and supply
+- **Industrial substitution** effects linking related commodities
+
+#### 3. Algorithmic Trading Coordination
+- **High-frequency trading** networks operating at microsecond scales
+- **Cross-market arbitrage** algorithms creating synchronized price movements
+- **Options market maker** hedging strategies creating synthetic correlations
+
+#### 4. Market Microstructure Effects
+- **Margin call cascades** propagating across markets
+- **Hidden liquidity networks** creating apparent non-local effects
+- **Crisis correlation increases** during market stress periods
+
+## Installation and Setup
+
+### Required Packages
+
+```bash
+pip install yfinance pandas numpy matplotlib scipy seaborn
 ```
-E(AB):  Gold today ↔ Oil today
-E(AB'): Gold today ↔ Oil tomorrow
-E(A'B): Gold tomorrow ↔ Oil today  
-E(A'B'): Gold tomorrow ↔ Oil tomorrow
+
+### Optional Advanced Packages
+
+```bash
+pip install hurst powerlaw  # For enhanced Mandelbrot analysis
 ```
 
-**The Bell-CHSH Formula**:
-```
-CHSH = |E(AB) + E(AB') + E(A'B) - E(A'B')| ≤ 2
-```
+### File Structure
 
-**Classical Economics Prediction**: No matter how strongly these commodities are connected by economic fundamentals, this combination of correlations cannot exceed 2.0. This is mathematically proven—any predetermined economic pattern is constrained by this limit.
-
-**Example Classical Pattern**:
 ```
-Economic Model: "Inflation cycles determine everything"
-- High inflation days: Gold ↑, Oil ↑ (both today and tomorrow)
-- Low inflation days: Gold ↓, Oil ↓ (both today and tomorrow)
-
-This gives correlations like:
-E(AB) = +0.5, E(AB') = +0.5, E(A'B) = +0.5, E(A'B') = +0.5
-CHSH = |0.5 + 0.5 + 0.5 - 0.5| = 1.0
+QuantumMarketFramework.py    # Core analysis framework
+SpyderQuantumAnalysis.py     # Easy-to-use Spyder interface
+README.md                    # This documentation
 ```
 
-**Quantum Violation** (CHSH > 2): Would indicate correlations so perfectly coordinated that no single economic theory could explain them. The "impossible" pattern would look like:
-```
-E(AB) = +0.707, E(AB') = +0.707, E(A'B) = +0.707, E(A'B') = -0.707
-CHSH = |0.707 + 0.707 + 0.707 - (-0.707)| = 2.828
-```
+## Quick Start Guide
 
-This pattern is mathematically impossible under any classical economic model, yet it's exactly what quantum mechanics predicts for entangled systems.
+### Option 1: Simple Spyder Interface
 
-**Quantum bound**: CHSH ≤ 2√2 ≈ 2.828 (Tsirelson's bound)
+1. Open `SpyderQuantumAnalysis.py` in Spyder
+2. Modify the configuration section:
 
-## Methodology
-
-### 1. Data Acquisition and Preprocessing
-
-**Data Sources**: Yahoo Finance commodity ETF prices
-- High-frequency intraday data (1-minute to daily intervals)
-- Robust error handling for missing data and market gaps
-- Automatic ticker validation and alternative suggestions
-
-**Quality Control**:
 ```python
-# Data cleaning pipeline
-- Remove NaN and zero prices
-- Detect and flag outliers (>10σ price movements)
-- Handle duplicate timestamps
-- Validate data continuity
+# Configuration
+COMMODITY_SET = 'etfs'          # Choose: 'etfs', 'agricultural', 'energy', 'metals', 'mixed'
+ANALYSIS_START_DATE = '2025-01-01'
+ANALYSIS_END_DATE = '2025-07-25'
+CORRELATION_THRESHOLD = 0.3
 ```
 
-Think of this as preparing a laboratory for quantum experiments, but instead of photons and lasers, we're working with price data. Just as quantum physicists need pristine experimental conditions, we need clean, high-quality market data to detect subtle coordination patterns that might otherwise be hidden in noise.
+3. Run the script - everything happens automatically!
 
-### 2. Binary Measurement Construction
-
-**Critical Design Decision**: Bell tests require binary outcomes (+1/-1). Our conversion methodology captures the essence of market sentiment while preserving the mathematical structure needed for quantum tests.
-
-#### Primary Measurements (A, B): Market Direction Decisions
-```python
-# Price movement direction
-movement = np.where(returns > 0, +1, -1)
-```
-
-**Scientific Justification**: Price direction captures fundamental market sentiment—the collective decision of whether to buy or sell—while eliminating magnitude bias that could confound correlation analysis.
-
-Consider this: when gold goes up 0.1% and oil goes up 2%, both are "up" movements (+1) despite different magnitudes. This binary approach reveals coordination patterns in market sentiment itself, not just in the size of price moves. It's like asking "Did markets decide to push these commodities in the same direction?" rather than "By how much did they move?"
-
-#### Alternative Measurement Settings (A', B'): Market Regime Detection
-
-We implement multiple complementary approaches to capture different aspects of market behavior:
-
-**1. Volatility-Based Regimes**:
-```python
-high_vol_regime = np.where(volatility > median_volatility, +1, -1)
-```
-This captures whether markets are in "calm" vs "turbulent" states. High volatility often indicates uncertainty, crisis, or major news events.
-
-**2. Correlation-Based Regimes**:
-```python
-high_corr_regime = np.where(correlation > median_correlation, +1, -1)
-```
-This identifies periods when commodities are moving together more than usual, suggesting coordinated market responses.
-
-**3. Magnitude-Based Regimes**:
-```python
-extreme_regime = np.where(|returns| > 75th_percentile, +1, -1)
-```
-This detects when price movements are unusually large, often signaling important market events or algorithmic trading activity.
-
-**Methodological Innovation**: We automatically select the measurement basis that maximizes CHSH value, ensuring optimal sensitivity to non-local correlations while maintaining the measurement-setting independence required for valid Bell tests.
-
-Think of these different measurement settings like having multiple ways to "look at" the market. Just as quantum particles can be measured for spin in different directions, we can measure market behavior from different perspectives—volatility, correlation strength, or movement magnitude. The key insight is that truly quantum-like markets would show different correlation patterns depending on which perspective we choose to examine.
-
-### 3. Correlation Analysis Framework
-
-#### Multi-Scale Correlation Assessment
-
-**Pearson Correlation** (Linear relationships):
-```python
-ρ_pearson = Σ(x_i - x̄)(y_i - ȳ) / √[Σ(x_i - x̄)²Σ(y_i - ȳ)²]
-```
-This measures straightforward linear relationships—if gold goes up 1%, how much does oil tend to move?
-
-**Spearman Rank Correlation** (Monotonic relationships):
-```python
-ρ_spearman = 1 - (6Σd_i²) / (n(n²-1))
-```
-More robust to outliers and non-linear monotonic relationships. This captures situations where "when gold moves strongly in one direction, oil tends to move strongly in the same direction" even if the exact amounts vary.
-
-#### Adaptive Time Window Selection
-```python
-window_size = max(10, min(50, data_length // 10))
-```
-Balances statistical power with temporal resolution. Think of this as choosing the right "zoom level" for analysis—too short and we miss patterns, too long and we average out important dynamics.
-
-#### Correlation Quality Metrics
-```python
-quality_score = data_quality × variance_quality × length_quality
-```
-Where:
-- **data_quality**: Fraction of non-zero returns (are markets actually moving?)
-- **variance_quality**: Sufficient price movement for meaningful correlation (enough activity to detect patterns?)
-- **length_quality**: Adequate sample size for statistical significance (enough data points for reliable results?)
-
-This is like checking whether our "quantum experiment" has proper signal-to-noise ratio before drawing conclusions.
-
-### 4. Event Detection Algorithm
-
-**Coordination Events** defined as time windows where:
-1. **|ρ(t)| > threshold**: Significant correlation detected
-2. **Quality score > 0.5**: Reliable measurement conditions
-3. **Temporal clustering**: Events within specified time windows
-
-**Statistical Rigor**:
-- Minimum event requirement (n ≥ 10) for reliable Bell tests
-- Bootstrap confidence intervals for uncertainty quantification
-- Multiple hypothesis correction for pair-wise testing
-
-In practical terms, we're identifying moments when commodities show unusually strong coordination. These are the "quantum measurement events" where we can test whether the coordination follows classical rules or violates them.
-
-For our Gold-Oil example, a coordination event might occur during a Federal Reserve announcement when both commodities react strongly and simultaneously to inflation expectations. These moments of strong correlation are where quantum-like violations would most likely appear.
-
-### 5. CHSH Calculation Methodology
-
-#### Expectation Value Computation
-```python
-def safe_expectation(x, y):
-    # Remove NaN values
-    mask = ~(np.isnan(x) | np.isnan(y))
-    x_clean, y_clean = x[mask], y[mask]
-    
-    # Minimum sample size check
-    if len(x_clean) < 2:
-        return 0.0
-    
-    # Correlation-based expectation
-    return np.corrcoef(x_clean, y_clean)[0, 1]
-```
-
-#### Measurement Basis Optimization
-
-The framework tests multiple measurement combinations and selects the basis yielding maximum CHSH value:
+### Option 2: Advanced Python Usage
 
 ```python
-# Test correlation-based measurements
-CHSH_corr = |E(AB) + E(AB'_corr) + E(A'_corr B) - E(A'_corr B'_corr)|
-
-# Test volatility-based measurements  
-CHSH_vol = |E(AB) + E(AB'_vol) + E(A'_vol B) - E(A'_vol B'_vol)|
-
-# Select optimal basis
-optimal_basis = argmax(CHSH_corr, CHSH_vol)
-```
-
-**Scientific Rationale**: This approach maximizes sensitivity to non-local correlations while maintaining measurement-setting independence required for valid Bell tests.
-
-**Concrete Example**: In our Gold-Oil system, we might find:
-- When measuring using volatility regimes: CHSH = 1.2
-- When measuring using correlation regimes: CHSH = 1.8
-- When measuring using magnitude regimes: CHSH = 1.4
-
-We select the correlation regime measurement (CHSH = 1.8) as it shows the strongest signature of coordination, while ensuring that this choice doesn't bias the measurement itself.
-
-### 6. Statistical Validation
-
-#### Bootstrap Confidence Intervals
-```python
-for i in range(n_bootstrap):
-    sample_events = resample(events, n=len(events))
-    chsh_bootstrap[i] = calculate_chsh(sample_events)
-
-ci_low, ci_high = percentile(chsh_bootstrap, [2.5, 97.5])
-```
-
-This technique repeatedly resamples our coordination events to determine how reliable our CHSH measurement is. It's like running the same experiment hundreds of times with slightly different data to see if we get consistent results.
-
-#### Significance Testing
-- **t-test against classical bound**: H₀: μ_CHSH ≤ 2
-- **Effect size calculation**: Cohen's d = (μ_CHSH - 2) / σ_CHSH
-- **Power analysis**: Determination of minimum sample sizes
-
-#### Multiple Comparisons Correction
-Bonferroni correction applied when testing multiple commodity pairs simultaneously.
-
-When testing many commodity pairs (Gold-Oil, Gold-Wheat, Oil-Copper, etc.), we need to account for the fact that by pure chance, some pairs might show high CHSH values. This correction ensures our findings are genuinely significant, not statistical flukes.
-
-## Advanced Bell Tests Implementation
-
-Beyond the basic CHSH test, we implement several sophisticated variants that provide different perspectives on market coordination and can detect subtle quantum-like effects that might be missed by standard analysis.
-
-### 1. CH74 (Clauser-Horne 1974) Inequality
-
-**Mathematical Form**:
-```
-|E(AB) - E(AB') + E(A'B) + E(A'B')| ≤ 2
-```
-
-**Key Difference from CHSH**: The CH74 test uses a subtraction rather than addition in one term, making it sensitive to different types of correlation patterns.
-
-**Market Implementation**:
-```python
-def test_ch74_inequality(events_df):
-    # Use extreme price movements as alternative measurement
-    extreme_moves = (
-        np.abs(events_df['return1']) > events_df['return1'].std() * 2
-    ) | (
-        np.abs(events_df['return2']) > events_df['return2'].std() * 2
-    )
-    
-    events_df['extreme_regime'] = extreme_moves.astype(int) * 2 - 1
-    
-    # Calculate CH74 components
-    E_AB = correlation(events_df['movement1'], events_df['movement2'])
-    E_AB_prime = correlation(events_df['movement1'], events_df['extreme_regime'])
-    E_A_prime_B = correlation(events_df['extreme_regime'], events_df['movement2'])
-    E_A_prime_B_prime = 1.0  # Perfect self-correlation
-    
-    ch74_value = abs(E_AB - E_AB_prime + E_A_prime_B + E_A_prime_B_prime)
-    return ch74_value
-```
-
-**Practical Interpretation**: The CH74 test is particularly sensitive to situations where normal price movements are coordinated, but extreme movements show different patterns. 
-
-**Gold-Oil Example**: 
-- Normal days: Gold and oil move together 70% of the time
-- Extreme volatility days: Gold and oil move together only 30% of the time
-- This creates a specific pattern that CH74 can detect even when CHSH might miss it
-
-**Why This Matters**: Different types of coordination might emerge under different market conditions. Some algorithms might coordinate normal trading but diverge during crises, while others might show the opposite pattern.
-
-### 2. Temporal Bell Inequalities
-
-**Concept**: Tests for time-separated non-local correlations, asking whether price movements today can be correlated with price movements tomorrow in ways that violate classical constraints.
-
-**Implementation**:
-```python
-def test_temporal_bell(events_df):
-    # Sort by time to maintain temporal order
-    events_df = events_df.sort_values('timestamp')
-    
-    # Test multiple time lags
-    best_temporal_value = 0.0
-    
-    for lag in [1, 2, 3, 5]:  # Days
-        if len(events_df) < lag * 4:
-            continue
-        
-        # Early window movements
-        early_movements1 = events_df['movement1'].iloc[:-lag].values
-        
-        # Late window movements (lagged)
-        late_movements2 = events_df['movement2'].iloc[lag:].values
-        
-        # Calculate temporal correlation
-        temporal_corr = correlate(early_movements1, late_movements2)
-        temporal_value = abs(temporal_corr) * 2.5  # Scale factor
-        best_temporal_value = max(best_temporal_value, temporal_value)
-    
-    return best_temporal_value
-```
-
-**Market Interpretation**: This tests whether gold prices today are correlated with oil prices tomorrow (and vice versa) in ways that cannot be explained by any classical economic model that accounts for information flow delays.
-
-**Gold-Oil Temporal Example**:
-```
-Classical Expectation:
-Day 1: Gold ↑ 2% (inflation fears)
-Day 2: Oil ↑ 1% (delayed reaction to same inflation news)
-Correlation: Moderate, explained by delayed information processing
-
-Quantum-like Pattern:
-Day 1: Gold ↑ 2%
-Day 2: Oil movement somehow "knows" about Day 1 gold movement 
-       beyond what any economic news could explain
-Correlation: Violates temporal Bell inequality
-```
-
-**Physical Interpretation**: If markets show temporal Bell violations, it suggests coordination mechanisms operating faster than information can flow through normal economic channels—possibly through algorithmic networks or market microstructure effects that create apparent "action at a distance."
-
-### 3. I3322 Inequality (Extended Multi-Setting Test)
-
-**Mathematical Form**:
-```
-I₃₃₂₂ = |⟨A₁B₁⟩ + ⟨A₁B₂⟩ + ⟨A₂B₁⟩ - ⟨A₂B₂⟩ + ⟨A₃B₁⟩ + ⟨A₃B₂⟩| ≤ 4
-```
-
-**Advanced Concept**: Uses three different measurement settings instead of two, providing a more stringent test of local realism.
-
-**Market Implementation**:
-```python
-def test_i3322_inequality(events_df):
-    # Create three measurement settings
-    
-    # Setting 1: Price direction (standard)
-    A1 = events_df['movement1'].values
-    
-    # Setting 2: High volatility regime
-    vol_threshold = events_df[['volatility1', 'volatility2']].mean(axis=1).median()
-    A2 = (events_df[['volatility1', 'volatility2']].mean(axis=1) > vol_threshold).astype(int) * 2 - 1
-    
-    # Setting 3: Large movement regime
-    move_threshold = events_df['move_magnitude'].quantile(0.67)
-    A3 = (events_df['move_magnitude'] > move_threshold).astype(int) * 2 - 1
-    
-    B1 = events_df['movement2'].values
-    B2 = events_df['movement2'].values  # Same for simplicity
-    
-    # Calculate I3322 terms
-    term1 = np.mean(A1 * B1)
-    term2 = np.mean(A1 * B2)
-    term3 = np.mean(A2 * B1)
-    term4 = np.mean(A2 * B2)
-    term5 = np.mean(A3 * B1)
-    term6 = np.mean(A3 * B2)
-    
-    i3322_value = abs(term1 + term2 + term3 - term4 + term5 + term6)
-    return i3322_value
-```
-
-**Gold-Oil I3322 Example**:
-```
-Three Ways to Measure Gold Behavior:
-A1: Price direction (up/down)
-A2: Volatility state (calm/turbulent)  
-A3: Movement magnitude (small/large)
-
-Two Ways to Measure Oil:
-B1: Price direction (up/down)
-B2: Price direction (same, for simplicity)
-
-Classical Limit: No matter how these measurements correlate, 
-                 I3322 ≤ 4.0
-
-Quantum Violation: I3322 > 4.0 would indicate coordination 
-                   patterns impossible under any classical 
-                   economic model using these three measurement 
-                   perspectives
-```
-
-**Why I3322 Matters**: This test can detect subtle coordination patterns that simpler two-setting tests might miss. It's particularly sensitive to complex algorithmic trading strategies that might coordinate across multiple market dimensions simultaneously.
-
-**Practical Significance**: If markets violate I3322, it suggests that coordination patterns are so sophisticated that they cannot be reduced to any simple economic relationship—they require quantum-like entanglement to explain.
-
-### 4. Network Bell Inequalities (Future Extension)
-
-**Concept**: Extends Bell tests to networks of multiple commodities simultaneously.
-
-**Multi-Commodity Implementation**:
-```python
-def test_network_bell(commodities_data):
-    """
-    Test Bell inequalities across entire commodity network
-    """
-    # Example: Gold-Oil-Wheat-Copper network
-    n_commodities = len(commodities_data)
-    
-    # Generate all possible correlation combinations
-    correlation_matrix = calculate_all_correlations(commodities_data)
-    
-    # Apply multipartite Bell inequality
-    network_bell_value = calculate_network_inequality(correlation_matrix)
-    
-    return network_bell_value
-```
-
-**Market Interpretation**: This would test whether entire commodity sectors (energy, agriculture, metals) coordinate in quantum-like ways, suggesting system-wide non-local effects in global markets.
-
-## Critical Methodological Considerations
-
-### 1. Binary Data Conversion: Scientific Validity
-
-**Question**: Does converting continuous price data to binary measurements compromise the analysis?
-
-**Answer**: **No - this is methodologically required and scientifically sound.**
-
-**Detailed Justification**:
-
-1. **Theoretical Requirement**: Bell inequalities are formulated for binary measurements. Continuous variable versions exist but are more complex and less established in the literature.
-
-2. **Information Preservation**: Price direction captures the fundamental market decision—the collective buy/sell sentiment that drives price formation. Consider this: when gold rises 0.1% and oil rises 2.5%, both represent market decisions to push prices higher. The binary conversion (+1, +1) captures this coordinated sentiment while eliminating noise from magnitude differences.
-
-3. **Precedent in Other Fields**: Similar approaches used in:
-   - **Quantum optics**: Photon detection (detected/not detected)
-   - **Neuroscience**: Neural spike responses (spike/no spike)
-   - **Econophysics**: Price movement directions in correlation studies
-
-4. **Robustness**: Binary conversion eliminates sensitivity to extreme outliers that could bias continuous correlation measures. A single massive price move doesn't distort the entire correlation analysis.
-
-**Gold-Oil Binary Example**:
-```
-Continuous Data (Hard to interpret):
-Day 1: Gold +0.1%, Oil +2.5%
-Day 2: Gold +3.2%, Oil +0.8% 
-Day 3: Gold -0.05%, Oil -1.1%
-
-Binary Data (Clear coordination pattern):
-Day 1: Gold +1, Oil +1  (Both up)
-Day 2: Gold +1, Oil +1  (Both up)
-Day 3: Gold -1, Oil -1  (Both down)
-→ Perfect coordination detected
-```
-
-The binary approach reveals that despite different magnitudes, the directional decisions were perfectly coordinated—exactly the type of pattern that could violate Bell inequalities.
-
-### 2. Measurement Independence
-
-**Critical Assumption**: A and A' must represent independent measurement choices.
-
-**Implementation**: 
-- **Spatial independence**: Different measurement bases (volatility vs. correlation regimes)
-- **Temporal independence**: Measurements at different time scales
-- **Methodological independence**: Different mathematical operations (direction vs. magnitude)
-
-**Gold-Oil Independence Example**:
-```
-Measurement A:  Gold direction today
-Measurement A': Gold direction under high volatility conditions
-
-These are independent because:
-- A measures actual price movement
-- A' measures price movement conditional on market state
-- The choice between A and A' represents different market perspectives
-- Neither predetermines the other
-```
-
-### 3. Detection Loophole Considerations
-
-**Locality Loophole**: Addressed by using:
-- Geographically separated markets when possible (London gold vs. New York oil)
-- High-frequency data to minimize communication time
-- Independent information sources
-
-**Freedom-of-Choice Loophole**: Mitigated by:
-- Algorithmic measurement setting selection
-- Multiple independent measurement bases
-- Randomized time window analysis
-
-**Market Context**: Unlike physics experiments, financial markets have natural "communication delays" built in—different trading sessions, time zones, and information processing speeds. This actually helps ensure measurement independence.
-
-### 4. The "Market Focus" Interpretation
-
-**What "Quantum-like Markets" Would Actually Mean**:
-
-If markets showed CHSH > 2, it would suggest that commodity correlations depend on which relationships the market collectively focuses on—a genuinely quantum-like property.
-
-**Classical Market Behavior**:
-```
-Underlying Economic Reality: "Oil and gold move together due to inflation"
-
-Predetermined relationships:
-- Today-today: 75% coordination (inflation model)
-- Today-tomorrow: 75% coordination (inflation model)  
-- Tomorrow-today: 75% coordination (inflation model)
-- Tomorrow-tomorrow: 75% coordination (inflation model)
-
-Result: CHSH = 1.0 (explainable by single economic model)
-```
-
-**"Quantum" Market Behavior**:
-```
-No Single Economic Reality - Correlations Depend on Market Focus
-
-When markets focus on same-day relationships:
-- Traders think: "Oil up today → gold up today"
-- Today-today: 85% coordination
-- Other combinations: Different patterns
-
-When markets focus on cross-day relationships:
-- Traders think: "Oil today → inflation tomorrow → gold tomorrow"  
-- Today-tomorrow: 85% coordination
-- Other combinations: Different patterns
-
-Result: CHSH = 2.828 (impossible to explain with any single model!)
-```
-
-**Practical Meaning**: The correlation pattern you observe would depend on what relationships markets are collectively processing, not on fixed economic fundamentals. This would represent a fundamental limit to economic prediction—some market behaviors would be genuinely uncertain, not just hard to forecast.
-
-## Data Quality and Validation
-
-### Quality Metrics
-```python
-quality_score = min(
-    non_zero_returns_fraction,
-    1 - exp(-variance_magnitude * 10000),
-    min(1, sample_size / (window * 10))
+from QuantumMarketFramework import QuantumMarketAnalyzer, run_complete_analysis
+
+# Run complete analysis
+results = run_complete_analysis(
+    commodity_set='etfs',
+    start_date='2025-01-01',
+    end_date='2025-07-25',
+    correlation_threshold=0.3,
+    save_results=True
 )
+
+# Access detailed results
+analyzer = results  # Returns QuantumMarketAnalyzer instance
+bell_results = analyzer.bell_results
+mandelbrot_metrics = analyzer.mandelbrot_metrics
+supply_chain_analysis = analyzer.supply_chain_analysis
 ```
 
-### Diagnostic Outputs
-- **Missing data percentage**: < 5% acceptable
-- **Gap detection**: Time series continuity analysis
-- **Volatility assessment**: Sufficient price movement for correlation
-- **Statistical power**: Sample size adequacy for Bell tests
+## Commodity Sets Available
 
-### Alternative Data Sources
-Framework includes fallback mechanisms:
-- Futures contracts → ETF equivalents
-- Failed tickers → Suggested alternatives
-- Data quality warnings and recommendations
+### ETFs (Recommended - Most Reliable Data)
+- **Symbols**: GLD, USO, DBA, CORN, WEAT, UNG
+- **Advantages**: Consistent data, good history, no gaps
+- **Best For**: Initial testing and reliable analysis
 
-Think of this as quality control for our "quantum experiment." Just as physicists need to ensure their detectors are working properly, we need to verify that our market data is clean and complete enough to detect subtle coordination patterns.
+### Agricultural Commodities
+- **Symbols**: Corn (ZC=F), Wheat (ZW=F), Soybeans (ZS=F), Cotton (CT=F), Sugar (SB=F), Coffee (KC=F)
+- **Advantages**: Strong physical supply chain connections
+- **Best For**: Testing weather and seasonal correlations
 
-## Interpretation Framework
+### Energy Commodities
+- **Symbols**: WTI Crude (CL=F), Brent Crude (BZ=F), Natural Gas (NG=F), Gasoline (RB=F), Heating Oil (HO=F)
+- **Advantages**: Tight refinery relationships and geopolitical connections
+- **Best For**: Testing infrastructure and geopolitical correlations
 
-### CHSH Value Interpretation
+### Metals
+- **Symbols**: Gold (GC=F), Silver (SI=F), Copper (HG=F), Platinum (PL=F), Palladium (PA=F)
+- **Advantages**: Safe haven correlations and industrial demand cycles
+- **Best For**: Testing economic cycle correlations
 
-| CHSH Range | Interpretation | Market Implication | Gold-Oil Example |
-|------------|----------------|-------------------|------------------|
-| 0 - 1.0 | Weak correlation | Random or uncorrelated markets | Correlation around 25-50% |
-| 1.0 - 1.5 | Moderate correlation | Standard market linkages | Inflation-driven coordination |
-| 1.5 - 2.0 | Strong classical correlation | Significant shared factors | Crisis-period coordination |
-| 2.0 - 2.828 | **Bell violation** | **Non-local coordination** | **Impossible classical pattern** |
-| > 2.828 | Impossible | Would violate quantum mechanics | Cannot occur in any theory |
+### Mixed Cross-Sector
+- **Symbols**: Gold, Oil, Corn, Copper, Dollar Index, VIX
+- **Advantages**: Tests correlations across different market sectors
+- **Best For**: Broad market coordination analysis
 
-### Physical Mechanisms for Bell Violations
+## Understanding Results: What Do Different CHSH Values Mean?
 
-**Possible Explanations for CHSH > 2**:
+### CHSH Value Interpretation Guide
 
-1. **Algorithmic Trading Networks**: 
-   - Synchronized algorithms responding instantaneously across markets
-   - Example: High-frequency trading algorithms that simultaneously buy gold ETFs and oil futures based on the same signals
-   - Could create correlation patterns that appear faster than information flow
+| CHSH Range | What This Means | Real-World Analogy | Action Needed |
+|------------|-----------------|-------------------|---------------|
+| **0.0 - 1.0** | **Weak correlation** | Like distant acquaintances occasionally agreeing | Standard market analysis |
+| **1.0 - 1.5** | **Moderate classical correlation** | Like friends who often think alike | Monitor for strengthening patterns |
+| **1.5 - 2.0** | **Strong classical correlation** | Like close friends finishing each other's sentences | Enhanced risk management needed |
+| **2.0 - 2.4** | **🚨 Bell violation - moderate** | Like twins separated at birth making identical choices | **Something unusual is happening** |
+| **2.4 - 2.828** | **🚨 Bell violation - strong** | Like quantum particles instantly affecting each other | **Investigate non-classical mechanisms** |
+| **> 2.828** | **Impossible** (data error) | Like predicting the future perfectly | Check data quality |
 
-2. **Information Cascades**: 
-   - Rapid information propagation faster than traditional communication
-   - Example: Dark pools and private trading networks sharing information across commodities
-   - Market makers with privileged access to order flow across multiple assets
+### What Bell Violations Actually Mean (In Practice)
 
-3. **Market Microstructure**: 
-   - Hidden order books and dark pools creating apparent non-locality
-   - Example: Large institutional orders split across gold and oil markets simultaneously
-   - Cross-commodity hedging strategies executed in coordinated ways
+When the framework detects CHSH > 2.0, it automatically investigates **four possible explanations**:
 
-4. **Quantum Effects**: 
-   - Genuine quantum coherence in macroscopic market systems
-   - Example: Collective trader psychology exhibiting quantum superposition states
-   - Market sentiment existing in multiple states until "measurement" (observation) occurs
+#### 1. **Mandelbrot's "Wild Randomness"** 📈
+- **What it is**: Markets behave more extremely than normal "bell curve" statistics predict
+- **Why it matters**: Standard risk models underestimate "impossible" events
+- **Example**: The 2008 crisis had many "25-sigma events" that should happen once in billions of years
+- **Practical impact**: Need fat-tail risk models, not normal distributions
 
-5. **Statistical Artifacts**: 
-   - Insufficient randomness in measurement settings
-   - Example: Systematic biases in how we choose time windows or measurement bases
-   - Hidden correlations in the measurement process itself
+#### 2. **Hidden Supply Chain Physics** 🌾
+- **What it is**: Physical world connections create correlations that seem impossible
+- **Why it matters**: Weather, storage, transportation create hidden links between commodities
+- **Example**: Drought in Australia affects wheat, which affects corn, which affects ethanol, which affects oil
+- **Practical impact**: Need to model physical constraints, not just financial relationships
 
-### Real-World Market Scenarios for Bell Violations
+#### 3. **Algorithmic Trading Networks** 🤖
+- **What it is**: High-frequency trading algorithms create microsecond-scale coordination
+- **Why it matters**: Machines can coordinate faster than humans can perceive
+- **Example**: One algorithm's trade triggers thousands of others in milliseconds across global markets
+- **Practical impact**: Market moves can happen faster than traditional risk management
 
-**Scenario 1: Flash Crash Coordination**
+#### 4. **Market Microstructure Effects** 📊
+- **What it is**: The mechanics of how markets operate create correlation illusions
+- **Why it matters**: Market structure itself can create seemingly impossible patterns
+- **Example**: Options market makers hedging creates synthetic correlations between seemingly unrelated assets
+- **Practical impact**: Need to understand market plumbing, not just economic fundamentals
+
+### The Multi-Layer Analysis Process
+
+When violations are found, the framework doesn't just declare "quantum behavior!" Instead, it:
+
+1. **🔍 Measures fractal signatures** - Is this Mandelbrot's "misbehavior"?
+2. **🌐 Maps supply chain connections** - Are there hidden physical links?
+3. **⚡ Tests algorithmic patterns** - Is high-frequency trading the cause?
+4. **🏗️ Examines market structure** - Are market mechanics creating illusions?
+
+Only after systematically ruling out these classical explanations would we consider more exotic possibilities.
+
+### Practical Value for Different Users
+
+**📊 For Risk Managers**: Early warning system for unusual correlation patterns that could break standard models.
+
+**🎓 For Researchers**: Systematic way to study market coordination mechanisms and distinguish between different theories.
+
+**💼 For Traders**: Understanding when markets might behave differently than expected, especially during stress periods.
+
+**🏫 For Students**: Practical application of quantum concepts to real-world data, bridging physics and economics.
+
+### Example Output
+
 ```
-Normal Day: Gold and oil correlations follow economic fundamentals
-CHSH ≈ 1.2
+🚀 QUANTUM MARKET COORDINATION ANALYSIS
+================================================================================
+📊 Analyzing Period: Jan_July_2025
+📅 Date Range: 2025-01-01 to 2025-07-25
+🎯 Commodity Set: ETFS
+🔗 Correlation Threshold: 0.3
 
-Flash Crash Day: Algorithmic selling triggers across all commodities
-- Same-day coordination: 95%
-- Cross-day coordination: 95%  
-- But tomorrow-tomorrow coordination: 5% (algorithms reset)
-CHSH ≈ 2.6 (Bell violation!)
+📈 Step 1: Collecting commodity data...
+✅ Collected data for 6 commodities
+📊 Total data points: 1,230
+
+🔬 Step 2: Running comprehensive multi-layer analysis...
+⚛️ Step 1: Bell Inequality Analysis...
+   Testing gold_etf ↔ oil_etf...
+      📊 CHSH = 2.156
+      🚨 VIOLATION! 18.8% toward quantum bound
+
+🚨 Bell violations detected! Running multi-layer analysis...
+📈 Step 2: Mandelbrotian Signature Analysis...
+🔗 Step 3: Supply Chain Coupling Analysis...
+🎯 Step 4: Multi-Layer Interpretation...
+
+🎯 PRIMARY MECHANISM: SUPPLY CHAIN PHYSICS
+📊 Confidence: 78.5%
 ```
 
-**Scenario 2: Options Expiration Effects**
-```
-Regular Trading: Standard supply/demand correlations
-CHSH ≈ 1.0
+## Advanced Analysis Options
 
-Options Expiration Week: Delta hedging creates artificial correlations
-- Complex correlation patterns depending on measurement timing
-- Different patterns based on which expiration cycles we focus on
-- Could create "impossible" correlation combinations
-CHSH > 2.0 (Bell violation)
-```
+### Testing Multiple Commodity Sets
 
-**Scenario 3: Central Bank Announcement**
-```
-Pre-Announcement: Normal economic correlations
-CHSH ≈ 1.1
-
-During Announcement: Markets process information simultaneously
-- Instantaneous reaction across gold, oil, currency markets
-- Correlation patterns that cannot be explained by information flow delays
-- Different patterns depending on market focus (inflation vs. growth)
-CHSH > 2.0 (Bell violation)
-```
-
-## Validation and Robustness Checks
-
-### 1. Surrogate Data Testing
 ```python
-# Generate surrogate data preserving autocorrelation but destroying cross-correlations
-surrogate_chsh = test_surrogate_data(shuffle_phases=True)
-significance = observed_chsh > percentile(surrogate_chsh, 95)
+# In Spyder console or Python script
+quick_results = quick_test_all_commodity_sets()
 ```
 
-This test creates fake data that looks like real market data but has no genuine coordination. If our Bell violations disappear with surrogate data, it confirms we're detecting real coordination patterns, not statistical artifacts.
+### Optimizing Correlation Threshold
 
-### 2. Measurement Setting Randomization
 ```python
-# Randomize measurement basis selection
-random_basis_chsh = test_random_measurements()
-basis_independence_test = compare_distributions(optimal_chsh, random_chsh)
+threshold_results = compare_different_thresholds()
 ```
 
-This ensures that our choice of measurement settings (volatility vs. correlation regimes) doesn't itself create the Bell violations. True quantum-like effects should persist regardless of how we randomly choose measurement settings.
+### Time Period Analysis
 
-### 3. Temporal Stability
 ```python
-# Rolling window analysis
-rolling_chsh = rolling_bell_test(window_size=30_days)
-temporal_consistency = variance(rolling_chsh) < threshold
+period_results = analyze_different_time_periods()
 ```
 
-Bell violations should show up consistently across different time periods if they represent genuine market properties rather than one-time statistical flukes.
+## Output Files
 
-### 4. Cross-Market Validation
+The framework generates several output files:
 
-**Implementation**: Test the same commodity relationships using different data sources:
-- ETFs vs. Futures contracts
-- Different exchanges (COMEX vs. LME for metals)
-- Different time zones (Asian vs. European vs. American sessions)
+### Figures
+- `Comprehensive_Analysis_[SET]_[DATE].png` - Main analysis dashboard
+- `Mandelbrot_Analysis_[SET]_[DATE].png` - Fractal analysis (if violations detected)
+- `SupplyChain_Analysis_[SET]_[DATE].png` - Supply chain analysis (if violations detected)
 
-**Gold-Oil Validation Example**:
+### Data Files
+- `[SET]_analysis_[DATE]_summary.json` - Complete analysis results
+- Analysis summary CSV files with detailed metrics
+
+## Data Quality and Limitations
+
+### Yahoo Finance Data Limitations
+- **Historical depth**: Limited for some commodity futures
+- **Data gaps**: Possible gaps in high-frequency data
+- **Geographic coverage**: Primarily US markets
+
+### Recommended Data Usage
+- **ETFs**: Most reliable, consistent data availability
+- **Daily interval**: Most stable for analysis
+- **3+ months**: Minimum period for reliable Bell tests
+- **6+ months**: Preferred for comprehensive analysis
+
+## Methodological Notes
+
+### Bell Test Validity
+- **Simultaneity**: All measurements use synchronized timestamps
+- **Independence**: Measurement settings are chosen independently
+- **Locality**: No causal connections assumed between measurements
+- **Statistical significance**: Minimum 10 events required per test
+
+### Quality Controls
+- **Data validation**: Outlier detection and cleaning
+- **Sample size**: Minimum thresholds for reliable statistics  
+- **Correlation quality**: Assessment of correlation reliability
+- **Bootstrap confidence**: Optional confidence intervals
+
+## Use Cases
+
+### Academic Research
+- **Econophysics studies**: Testing quantum-like behavior in markets
+- **Market microstructure**: Understanding coordination mechanisms
+- **Risk management**: Identifying non-classical correlation patterns
+
+### Industry Applications
+- **Portfolio management**: Enhanced correlation analysis
+- **Risk assessment**: Detecting unusual market coordination
+- **Algorithmic trading**: Understanding market coupling mechanisms
+
+### Educational Purposes
+- **Teaching Bell inequalities**: Practical application to real data
+- **Market analysis**: Understanding correlation structures
+- **Data science**: Working with financial time series
+
+## Troubleshooting
+
+### Common Issues
+
+**No coordination events found:**
+- Lower correlation threshold (try 0.2)
+- Use longer time period (6+ months)
+- Try 'etfs' commodity set (most reliable data)
+
+**Insufficient data collected:**
+- Try 'etfs' instead of futures contracts
+- Use daily ('1d') instead of high-frequency data
+- Check internet connection for data download
+
+**CHSH values near zero:**
+- Commodities may not be correlated in chosen period
+- Try different commodity set or time period
+- Check data quality diagnostics
+
+### Data Quality Issues
+
+Check the data quality diagnostics output:
+- **Quality Score < 50%**: Try different commodities or time period
+- **High missing data**: Use ETFs instead of futures
+- **Many gaps**: Switch to daily data from high-frequency
+
+## Citation and References
+
+If you use this framework in research, please cite:
+
 ```
-Test 1: GLD (gold ETF) vs. USO (oil ETF) → CHSH = 1.8
-Test 2: Gold futures vs. Oil futures → CHSH = 1.7  
-Test 3: London gold vs. Brent oil → CHSH = 1.9
-
-Consistent results across different instruments suggest 
-genuine coordination rather than instrument-specific artifacts
-```
-
-## Software Implementation
-
-### Architecture
-```
-QuantumCommodityFramework/
-├── core/
-│   ├── data_collector.py      # Yahoo Finance integration
-│   ├── bell_tester.py         # CHSH calculations
-│   ├── correlation_analyzer.py # Multi-scale correlation
-│   └── event_detector.py      # Coordination event identification
-├── analysis/
-│   ├── statistical_tests.py   # Bootstrap, significance tests
-│   ├── visualization.py       # Publication-quality plots
-│   └── report_generator.py    # Automated reporting
-├── advanced_tests/
-│   ├── ch74_tester.py         # Clauser-Horne 1974 inequality
-│   ├── temporal_bell.py       # Time-separated correlations
-│   ├── i3322_tester.py        # Multi-setting Bell tests
-│   └── network_bell.py        # Multi-commodity networks
-└── validation/
-    ├── surrogate_testing.py   # Null hypothesis testing
-    ├── robustness_checks.py   # Sensitivity analysis
-    └── benchmark_tests.py     # Known result validation
-```
-
-### Computational Complexity
-- **Data Collection**: O(N·T) where N = commodities, T = time points
-- **Correlation Calculation**: O(T·W) where W = window size
-- **Bell Testing**: O(E) where E = number of events
-- **Bootstrap Analysis**: O(B·E) where B = bootstrap samples
-- **Advanced Tests**: O(E·M) where M = number of measurement settings
-
-### Performance Optimization
-- Parallel data collection using ThreadPoolExecutor
-- Vectorized correlation calculations with NumPy
-- Efficient memory management for large datasets
-- Caching mechanisms for repeated calculations
-
-The framework is designed to handle large-scale analysis across hundreds of commodity pairs while maintaining computational efficiency suitable for real-time market monitoring.
-
-## Expected Results and Significance
-
-### Publication-Quality Outputs
-
-1. **Quantitative Measures**:
-   - CHSH values with confidence intervals
-   - Statistical significance tests
-   - Effect sizes and power analysis
-
-2. **Visualizations**:
-   - Price evolution and correlation networks
-   - CHSH value distributions and violations
-   - Temporal dynamics of coordination events
-
-3. **Summary Statistics**:
-   - Event detection rates
-   - Cross-market correlation patterns
-   - Violation frequencies across market conditions
-
-### Scientific Impact
-
-**Implications of Bell Violations in Markets**:
-
-1. **Fundamental Physics**: Evidence for macroscopic quantum effects in economic systems
-2. **Economic Theory**: Challenges to efficient market hypothesis and rational expectations
-3. **Risk Management**: Non-local correlations imply hidden systemic risks not captured by traditional models
-4. **Regulatory Policy**: Need for new frameworks addressing quantum market effects
-5. **Algorithmic Trading**: Quantum-inspired coordination strategies and market making
-
-**Example Impact Scenario**:
-```
-Discovery: Gold-Oil Bell violation during Federal Reserve announcements
-CHSH = 2.3 (15% above classical limit)
-
-Scientific Implications:
-- First demonstration of quantum-like coordination in macroscopic markets
-- Evidence that information processing affects market relationships
-- New class of systemic risk not captured by current models
-
-Practical Implications:  
-- Risk management models need quantum correlation adjustments
-- Regulatory monitoring of algorithmic coordination effects
-- New trading strategies based on quantum market dynamics
+Quantum Market Coordination Analysis Framework
+Bell Inequality Testing for Commodity Market Correlations
+[Your Institution/Organization]
+[Year]
 ```
 
-### Future Directions
+### Key References
+- Bell, J.S. (1964). "On the Einstein Podolsky Rosen paradox." Physics 1, 195-200.
+- Clauser, J.F., et al. (1969). "Proposed experiment to test local hidden-variable theories." Physical Review Letters 23, 880-884.
+- Mandelbrot, B.B. (1963). "The variation of certain speculative prices." Journal of Business 36, 394-419.
 
-1. **Extended Bell Tests**: Multi-party inequalities for market networks
-2. **Quantum Error Correction**: Adaptation for noisy financial data
-3. **Real-Time Detection**: Live monitoring of Bell violations
-4. **Cross-Asset Analysis**: Extension to stocks, bonds, currencies
-5. **Causal Analysis**: Distinguishing correlation from causation in violations
+## Contributing
 
-**Next-Generation Research Questions**:
-- Can quantum computing provide advantages in detecting market Bell violations?
-- Do cryptocurrency markets show different quantum signatures than traditional commodities?
-- Can we predict market crashes using quantum correlation breakdowns?
-- Do high-frequency trading networks create artificial quantum-like effects?
+This framework is designed for:
+- **Researchers** studying market coordination mechanisms
+- **Analysts** investigating unusual correlation patterns  
+- **Students** learning about Bell inequalities and market analysis
+- **Practitioners** enhancing risk management approaches
 
-## Conclusion
+### Extending the Framework
 
-This framework provides the first rigorous implementation of Bell inequality tests for financial markets, offering a novel approach to detecting and quantifying non-local coordination in commodity prices. The methodology is scientifically sound, computationally efficient, and capable of producing publication-quality results suitable for high-impact journals.
+The modular design allows easy extension:
+- **New commodity sets**: Add to `commodity_sets` dictionary
+- **Additional Bell tests**: Extend `_run_bell_tests()` method
+- **Enhanced metrics**: Add to Mandelbrot or supply chain analysis
+- **Custom visualizations**: Extend plotting functions
 
-The binary data conversion is not only methodologically appropriate but theoretically required for valid Bell tests. The framework's multi-scale correlation analysis, adaptive measurement settings, and robust statistical validation provide a comprehensive toolkit for exploring quantum-like phenomena in macroscopic economic systems.
+## License and Disclaimer
 
-**Key Contributions**:
-1. **Methodological Innovation**: First rigorous Bell test framework for financial markets
-2. **Theoretical Foundation**: Bridges quantum mechanics and econophysics
-3. **Practical Implementation**: Working software for large-scale market analysis
-4. **Statistical Rigor**: Comprehensive validation and robustness testing
-5. **Scientific Impact**: Potential to revolutionize understanding of market coordination
+This framework is provided for educational and research purposes. 
 
-The framework opens new avenues for understanding market behavior that go beyond traditional economic models, potentially revealing coordination mechanisms that operate at the fundamental limits of what's classically possible.
+**Important Disclaimers:**
+- Not financial advice or trading recommendations
+- Results require careful interpretation within broader market context
+- Bell inequality violations do not necessarily imply quantum behavior
+- Always consider multiple explanations for unusual correlations
 
-## References and Further Reading
+## Contact and Support
 
-### Bell Inequalities and Quantum Foundations
-1. Bell, J.S. (1964). "On the Einstein Podolsky Rosen paradox." Physics 1, 195-200.
-2. Clauser, J.F., Horne, M.A., Shimony, A., & Holt, R.A. (1969). "Proposed experiment to test local hidden-variable theories." Physical Review Letters 23, 880-884.
-3. Clauser, J.F. & Horne, M.A. (1974). "Experimental consequences of objective local theories." Physical Review D 10, 526-535.
-4. Śliwa, C. (2003). "Symmetries of the Bell correlation inequalities." Physics Letters A 317, 165-168. *[Original derivation of I3322 and related multipartite Bell inequalities]*
-5. Aspect, A., Grangier, P., & Roger, G. (1982). "Experimental realization of Einstein-Podolsky-Rosen-Bohm Gedankenexperiment." Physical Review Letters 49, 91-94.
-6. Brunner, N., Cavalcanti, D., Pironio, S., Scarani, V., & Wehner, S. (2014). "Bell nonlocality." Reviews of Modern Physics 86, 419-478.
-
-### Quantum Finance and Econophysics
-7. Baaquie, B.E. (2004). "Quantum Finance: Path Integrals and Hamiltonians for Options and Interest Rates." Cambridge University Press.
-8. Mantegna, R.N. & Stanley, H.E. (1999). "Introduction to Econophysics: Correlations and Complexity in Finance." Cambridge University Press.
-9. Sornette, D. (2003). "Why Stock Markets Crash: Critical Events in Complex Financial Systems." Princeton University Press.
-10. Khrennikov, A. (2010). "Ubiquitous Quantum Structure: From Psychology to Finance." Springer-Verlag Berlin Heidelberg.
-
-### Advanced Bell Tests and Applications
-11. Collins, D., Gisin, N., Linden, N., Massar, S., & Popescu, S. (2002). "Bell inequalities for arbitrarily high-dimensional systems." Physical Review Letters 88, 040404.
-12. Pironio, S. (2005). "Lifting Bell inequalities." Journal of Mathematical Physics 46, 062112.
-13. Cabello, A. (2013). "Simple explanation of the quantum violation of a fundamental inequality." Physical Review Letters 110, 060402.
+For questions about:
+- **Implementation**: Check the code documentation and examples
+- **Methodology**: Review the scientific approach section
+- **Results interpretation**: Consider the multi-layer analysis framework
+- **Extensions**: Follow the modular design patterns
 
 ---
 
-**Contact**: For questions regarding implementation or theoretical foundations, please refer to the framework documentation or contact the development team.
+**Framework Version**: 2.0  
+**Last Updated**: 2025  
+**Compatibility**: Python 3.7+, requires pandas, numpy, matplotlib, scipy
