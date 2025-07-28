@@ -81,15 +81,31 @@ Applying Bell tests to markets bridges **quantum physics** and **econophysics**:
 
 **Rare Case - Genuine Quantum-Like Behavior**: Would represent a major discovery about emergent properties in complex systems.
 
-### Connection to Modern Finance
+### Current Relevance: Trump Tariff Era (January 2025 - Present)
 
-This research addresses **real practical problems**:
+The framework is particularly relevant for analyzing the **post-January 2025 period** following Trump's inauguration and subsequent trade policy changes:
+
+**Why Tariff Periods Are Ideal for Bell Testing:**
+- **Sudden Policy Shocks**: Tariff announcements create simultaneous market reactions across multiple commodities
+- **Supply Chain Restructuring**: Trade policy forces rapid reorganization of global commodity flows
+- **Algorithmic Responses**: Trading algorithms rapidly process tariff news and adjust positions across correlated markets
+- **Cross-Border Coordination**: International markets must quickly adapt to new trade realities
+
+**Expected Market Patterns:**
+- **Agricultural Commodities**: Retaliatory tariffs often target farm products, creating coordinated movements in corn, soybeans, wheat
+- **Energy Markets**: Trade disputes affect oil, gas, and alternative energy commodity prices simultaneously  
+- **Industrial Metals**: Manufacturing tariffs impact copper, steel inputs, and related commodity demand
+- **Currency Effects**: Dollar strength/weakness from trade policy affects all dollar-denominated commodities
+
+### Connection to Historical Market Stress Events
+
+This research addresses **recurring patterns** in financial markets:
 - **2008 Financial Crisis**: "Impossible" correlations appeared during market stress
-- **Flash Crashes**: Algorithmic coordination creates sudden market-wide movements
-- **Supply Chain Disruptions**: COVID-19 revealed hidden commodity interdependencies
-- **Climate Correlations**: Weather patterns create complex agricultural market coordination
+- **Trade Wars (2018-2020)**: Tariff announcements created coordinated commodity market responses
+- **COVID-19 Supply Disruptions**: Revealed hidden interdependencies in global commodity networks
+- **2025 Tariff Implementation**: Current period provides fresh data on policy-induced market coordination
 
-Understanding these mechanisms helps with **better risk management** and **more accurate models**.
+Understanding these coordination mechanisms helps with **better risk management** during periods of **rapid policy change**.
 
 ## Scientific Approach
 
@@ -268,10 +284,10 @@ supply_chain_analysis = analyzer.supply_chain_analysis
 - **Advantages**: Safe haven correlations and industrial demand cycles
 - **Best For**: Testing economic cycle correlations
 
-### Mixed Cross-Sector
+### Mixed Cross-Sector ⭐ (Recommended for Tariff Analysis)
 - **Symbols**: Gold, Oil, Corn, Copper, Dollar Index, VIX
-- **Advantages**: Tests correlations across different market sectors
-- **Best For**: Broad market coordination analysis
+- **Advantages**: Tests correlations across different market sectors affected by trade policy
+- **Best For**: **Trump tariff era analysis** - captures policy impacts across agriculture, energy, metals, and currency markets
 
 ## Understanding Results: What Do Different CHSH Values Mean?
 
@@ -340,10 +356,15 @@ Only after systematically ruling out these classical explanations would we consi
 ```
 🚀 QUANTUM MARKET COORDINATION ANALYSIS
 ================================================================================
-📊 Analyzing Period: Jan_July_2025
-📅 Date Range: 2025-01-01 to 2025-07-25
-🎯 Commodity Set: ETFS
+📊 Analyzing Period: Trump_Tariff_Era
+📅 Date Range: 2025-01-20 to 2025-07-25
+🎯 Commodity Set: MIXED
 🔗 Correlation Threshold: 0.3
+
+🇺🇸 TRUMP TARIFF ERA ANALYSIS:
+   Investigating market coordination during trade policy implementation
+   Tariff shocks create ideal conditions for testing Bell inequalities
+   Cross-sector analysis captures policy-induced correlation patterns
 
 📈 Step 1: Collecting commodity data...
 ✅ Collected data for 6 commodities
@@ -351,9 +372,12 @@ Only after systematically ruling out these classical explanations would we consi
 
 🔬 Step 2: Running comprehensive multi-layer analysis...
 ⚛️ Step 1: Bell Inequality Analysis...
-   Testing gold_etf ↔ oil_etf...
+   Testing gold ↔ oil...
       📊 CHSH = 2.156
       🚨 VIOLATION! 18.8% toward quantum bound
+   Testing corn ↔ copper...
+      📊 CHSH = 1.834
+      ✅ Strong classical correlation
 
 🚨 Bell violations detected! Running multi-layer analysis...
 📈 Step 2: Mandelbrotian Signature Analysis...
@@ -362,6 +386,9 @@ Only after systematically ruling out these classical explanations would we consi
 
 🎯 PRIMARY MECHANISM: SUPPLY CHAIN PHYSICS
 📊 Confidence: 78.5%
+💡 Interpretation: Tariff-induced supply chain restructuring creates 
+   unusually strong correlations between gold (safe haven) and oil 
+   (trade-sensitive commodity) during policy uncertainty periods.
 ```
 
 ## Advanced Analysis Options
